@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recommendations — Smart Interview Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body data-page="tips">
+  <div id="app-navbar"></div>
+
+  <main class="container page">
+    <div class="page-header">
+      <div>
+        <h1>Recommendations</h1>
+        <p>Personalised next-step suggestions plus universal interview tips.</p>
+      </div>
+      <a class="btn btn-outline" href="dashboard.html">&larr; Back to dashboard</a>
+    </div>
+
+    <div class="recommend-card">
+      <h3>For you, right now</h3>
+      <p id="personal-rec">Loading personalised recommendation…</p>
+    </div>
+
+    <h3 style="margin: 14px 0 12px; font-size:18px;">Weakest topics — practise these next</h3>
+    <div id="weak-host" class="topic-grid">
+      <div class="spinner"></div>
+    </div>
+
+    <h3 style="margin: 30px 0 12px; font-size:18px;">Universal interview prep tips</h3>
+    <div class="tip-grid">
+      <div class="tip-card">
+        <h4>1. Solve, then re-solve</h4>
+        <p>Re-attempt a problem 2–3 days later without looking. That's where retention happens.</p>
+      </div>
+      <div class="tip-card">
+        <h4>2. Talk while you code</h4>
+        <p>Practise narrating your approach out loud — it's exactly what interviewers expect.</p>
+      </div>
+      <div class="tip-card">
+        <h4>3. Master patterns, not problems</h4>
+        <p>Sliding window, two pointers, BFS/DFS, DP — group problems by pattern.</p>
+      </div>
+      <div class="tip-card">
+        <h4>4. Time-box practice</h4>
+        <p>30 minutes max per problem. Then read the editorial. Move on. Revisit later.</p>
+      </div>
+      <div class="tip-card">
+        <h4>5. Mock interview weekly</h4>
+        <p>Simulate the real thing — stranger, camera, whiteboard or shared editor.</p>
+      </div>
+      <div class="tip-card">
+        <h4>6. Track everything here</h4>
+        <p>If it isn't logged, it didn't happen. Use this tracker every single day.</p>
+      </div>
+    </div>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/recommendations.js"></script>
+</body>
+</html>

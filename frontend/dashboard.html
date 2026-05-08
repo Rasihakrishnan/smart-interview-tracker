@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard — Smart Interview Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body data-page="dashboard">
+  <div id="app-navbar"></div>
+
+  <main class="container page">
+    <div class="page-header">
+      <div>
+        <h1 id="welcome-title">Welcome back</h1>
+        <p>Here's your interview prep snapshot.</p>
+      </div>
+      <a class="btn btn-primary" href="add-problem.html">+ Add Problem</a>
+    </div>
+
+    <div class="recommend-card" id="recommend-card">
+      <h3>Today's Recommendation</h3>
+      <p id="recommend-text">Loading recommendation…</p>
+    </div>
+
+    <div class="stats-grid" id="stats-grid">
+      <div class="card stat-card"><div class="num" id="s-total">—</div><div class="label">Total problems</div></div>
+      <div class="card stat-card"><div class="num" id="s-solved">—</div><div class="label">Solved</div></div>
+      <div class="card stat-card"><div class="num" id="s-unsolved">—</div><div class="label">Unsolved</div></div>
+      <div class="card stat-card"><div class="num" id="s-topics">—</div><div class="label">Topics covered</div></div>
+    </div>
+
+    <div class="quick-grid">
+      <div class="card">
+        <div class="list-card-head">
+          <h3 style="margin:0;color:var(--c-text)">Recent problems</h3>
+          <a class="btn btn-sm btn-outline" href="problems.html">View all</a>
+        </div>
+        <div id="recent-list" class="mini-list">
+          <div class="empty"><h3>No problems yet</h3><p>Add your first one to get started.</p></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="list-card-head">
+          <h3 style="margin:0;color:var(--c-text)">Difficulty mix</h3>
+        </div>
+        <div class="mini-list">
+          <div class="mini-item"><span>Easy</span><b id="d-easy">0</b></div>
+          <div class="mini-item"><span>Medium</span><b id="d-medium">0</b></div>
+          <div class="mini-item"><span>Hard</span><b id="d-hard">0</b></div>
+        </div>
+        <div style="margin-top:14px"><a class="btn btn-sm btn-outline btn-block" href="analytics.html">Open full analytics</a></div>
+      </div>
+    </div>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

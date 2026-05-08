@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Create account — Smart Interview Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body data-page="register">
+  <div id="app-navbar"></div>
+
+  <main class="auth-wrap">
+    <form class="form-card" id="register-form" novalidate>
+      <h2>Create your account</h2>
+      <p class="form-sub">Start tracking problems in under a minute.</p>
+
+      <div class="form-error hidden" id="register-error"></div>
+
+      <div class="form-group">
+        <label for="name">Full name</label>
+        <input class="input" type="text" id="name" name="name" required placeholder="Aarav Sharma" autocomplete="name" />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input class="input" type="email" id="email" name="email" required placeholder="you@example.com" autocomplete="email" />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input class="input" type="password" id="password" name="password" minlength="4" required placeholder="At least 4 characters" autocomplete="new-password" />
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block" id="register-btn">Create account</button>
+
+      <div class="form-foot">
+        Already a member? <a href="login.html">Sign in</a>
+      </div>
+    </form>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/register.js"></script>
+</body>
+</html>

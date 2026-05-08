@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Problems — Smart Interview Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body data-page="problems">
+  <div id="app-navbar"></div>
+
+  <main class="container page">
+    <div class="page-header">
+      <div>
+        <h1>All Problems</h1>
+        <p>Search, filter and manage your tracked problems.</p>
+      </div>
+      <a class="btn btn-primary" href="add-problem.html">+ Add Problem</a>
+    </div>
+
+    <div class="toolbar">
+      <input class="input" id="f-search"     type="text"   placeholder="Search by title or topic…" />
+      <select class="select" id="f-difficulty">
+        <option value="">All difficulties</option>
+        <option value="Easy">Easy</option>
+        <option value="Medium">Medium</option>
+        <option value="Hard">Hard</option>
+      </select>
+      <select class="select" id="f-status">
+        <option value="">All statuses</option>
+        <option value="Solved">Solved</option>
+        <option value="Unsolved">Unsolved</option>
+      </select>
+      <select class="select" id="f-sort">
+        <option value="recent">Sort: Recent first</option>
+        <option value="title">Sort: Title (A–Z)</option>
+        <option value="difficulty">Sort: Difficulty</option>
+        <option value="topic">Sort: Topic</option>
+      </select>
+      <button class="btn btn-ghost btn-sm" id="f-clear" type="button">Clear</button>
+    </div>
+
+    <div id="list-host">
+      <div class="spinner"></div>
+    </div>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/problems.js"></script>
+</body>
+</html>

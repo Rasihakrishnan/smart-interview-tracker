@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Analytics — Smart Interview Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body data-page="analytics">
+  <div id="app-navbar"></div>
+
+  <main class="container page">
+    <div class="page-header">
+      <div>
+        <h1>Analytics</h1>
+        <p>Visual breakdown of your problem-solving progress.</p>
+      </div>
+      <a class="btn btn-outline" href="dashboard.html">&larr; Back to dashboard</a>
+    </div>
+
+    <div class="stats-grid">
+      <div class="card stat-card"><div class="num" id="a-solved">—</div><div class="label">Solved</div></div>
+      <div class="card stat-card"><div class="num" id="a-unsolved">—</div><div class="label">Unsolved</div></div>
+      <div class="card stat-card"><div class="num" id="a-total">—</div><div class="label">Total tracked</div></div>
+      <div class="card stat-card"><div class="num" id="a-rate">—</div><div class="label">Solve rate</div></div>
+    </div>
+
+    <div class="charts-grid">
+      <div class="chart-card">
+        <h3>Difficulty distribution</h3>
+        <div class="chart-box"><canvas id="difficultyChart"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <h3>Topic distribution</h3>
+        <div class="chart-box"><canvas id="topicChart"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <h3>Solved vs Unsolved</h3>
+        <div class="chart-box"><canvas id="statusChart"></canvas></div>
+      </div>
+    </div>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/analytics.js"></script>
+</body>
+</html>

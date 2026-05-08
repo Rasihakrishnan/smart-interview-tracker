@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profile — Smart Interview Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body data-page="profile">
+  <div id="app-navbar"></div>
+
+  <main class="container page">
+    <div class="page-header">
+      <div>
+        <h1>Your Profile</h1>
+        <p>Account details and a quick summary of your activity.</p>
+      </div>
+      <button class="btn btn-danger" id="btn-logout">Logout</button>
+    </div>
+
+    <div class="profile-grid">
+      <div class="card" style="text-align:center">
+        <div class="profile-avatar" id="p-avatar">U</div>
+        <h3 id="p-name" style="color:var(--c-text);font-size:18px;margin-bottom:4px">User</h3>
+        <p id="p-email" style="color:var(--c-text-muted);font-size:13px">—</p>
+        <p style="color:var(--c-text-light);font-size:12px;margin-top:10px">User ID: <span id="p-id">—</span></p>
+      </div>
+
+      <div class="card">
+        <h3 style="color:var(--c-text);font-size:16px;margin-bottom:14px">Activity overview</h3>
+        <div class="stats-grid" style="margin-bottom:0">
+          <div class="card stat-card" style="background:var(--c-surface-2);box-shadow:none">
+            <div class="num" id="pf-total">—</div><div class="label">Problems</div>
+          </div>
+          <div class="card stat-card" style="background:var(--c-surface-2);box-shadow:none">
+            <div class="num" id="pf-solved">—</div><div class="label">Solved</div>
+          </div>
+          <div class="card stat-card" style="background:var(--c-surface-2);box-shadow:none">
+            <div class="num" id="pf-rate">—</div><div class="label">Solve rate</div>
+          </div>
+          <div class="card stat-card" style="background:var(--c-surface-2);box-shadow:none">
+            <div class="num" id="pf-topics">—</div><div class="label">Topics</div>
+          </div>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="add-problem.html">Add a problem</a>
+          <a class="btn btn-outline" href="analytics.html">View analytics</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>
